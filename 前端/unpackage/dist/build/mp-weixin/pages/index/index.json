@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "疫情首页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "uni-notice-bar": "/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar",
+    "custom-tabs": "/uni_modules/custom-tabs/components/custom-tabs/custom-tabs",
+    "custom-tab-pane": "/uni_modules/custom-tabs/components/custom-tab-pane/custom-tab-pane",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "card-swiper": "/components/helang-cardSwiper/helang-cardSwiper",
+    "hm-news-card": "/components/hm-news-card/index",
+    "zkml-button": "/components/zkml-Button/zkml-Button"
+  }
+}

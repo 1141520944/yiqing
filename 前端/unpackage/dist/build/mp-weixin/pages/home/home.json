@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "个人主页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "drag-button": "/components/drag-button/drag-button",
+    "custom-tabs": "/uni_modules/custom-tabs/components/custom-tabs/custom-tabs",
+    "custom-tab-pane": "/uni_modules/custom-tabs/components/custom-tab-pane/custom-tab-pane",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "zkml-button": "/components/zkml-Button/zkml-Button"
+  }
+}

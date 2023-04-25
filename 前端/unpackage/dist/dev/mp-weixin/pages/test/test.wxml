@@ -1,0 +1,1 @@
+<view class="content"><view class="btn"><button type="default" data-event-opts="{{[['tap',[['test',['$event']]]]]}}" bindtap="__e">扫描</button></view><view class="admin"><view>{{msg}}</view></view></view>

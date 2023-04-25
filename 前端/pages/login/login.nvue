@@ -1,0 +1,271 @@
+<template>
+	<view class="container">
+		<view class="bg bg-color-base margin-b20"></view>
+		
+		<view class="tab vs-row vs-align-center">
+			<image class="tab-bg" src="/static/banner-icon.png" mode=""></image>
+			
+			<view class="vs-row vs-align-center">
+				<view class="vs-column vs-align-center margin-r40" @click="cur = 0">
+					<text class="font-50 margin-b20" :class="[cur ? 'color-black-3': 'color-base']">操作员</text>
+					<view class="line bg-color-base" v-if="!cur"></view>
+				</view>
+				<view class="vs-column vs-align-center" @click="cur = 1">
+					<text class="font-46 margin-b20" :class="[cur ? 'color-base': 'color-black-3']">辅导员</text>
+					<view class="line bg-color-base" v-if="cur"></view>
+				</view>
+			</view>
+		</view>
+		
+		<view class="login margin-b80" v-if="!cur">
+			<view class="input vs-row vs-align-center margin-b40">
+				<image class="input-icon margin-r20" src="/static/account.png" mode=""></image>
+				<input class="vs-flex-item color-base font-30" type="text" value="" :maxlength="11" placeholder="请输入您的用户名" placeholder-class="input-placeholder" v-model="username"/>
+			</view>
+			<view class="input vs-row vs-align-center margin-b40">
+				<image class="input-icon margin-r20" src="/static/password.png" mode=""></image>
+				<input class="vs-flex-item color-base font-30" type="text" password value="" placeholder="请输入您的登录密码" placeholder-class="input-placeholder" v-model="password"/>
+			</view>
+		</view>
+		
+		<view class="register margin-b80" v-if="cur">
+			<view class="input vs-row vs-align-center margin-b40">
+				<image class="input-icon margin-r20" src="/static/account.png" mode=""></image>
+				<input class="vs-flex-item color-base font-30" type="text" value="":maxlength="11" placeholder="请输入您的用户名" placeholder-class="input-placeholder" v-model="username"/>
+			</view>
+			<view class="input vs-row vs-align-center margin-b40">
+				<image class="input-icon margin-r20" src="/static/password.png" mode=""></image>
+				<input class="vs-flex-item color-base font-30" type="text" password value="" placeholder="请输入您的登录密码" placeholder-class="input-placeholder" v-model="password"/>
+			</view>
+		</view>
+		
+		<view class="button bg-color-base vs-row vs-align-center vs-space-center margin-b20" v-on:click="Login">
+			<text class="color-white font-34">立即{{ cur ? '登录': '登录' }}</text>
+		</view>
+		
+	<!-- 	<view class="vs-row vs-align-center vs-space-center margin-b100">
+			<text class="color-base font-28">忘记密码？</text>
+		</view> -->
+		
+		<!-- <view class="other">
+			<view class="vs-row vs-align-center margin-b40">
+				<view class="separator vs-flex-item"></view>
+				<text class="color-black-3 font-28">更多登录方式</text>
+				<view class="separator vs-flex-item"></view>
+			</view>
+			
+			<view class="other-items vs-row vs-align-center vs-space-around">
+				<image class="other-icon" src="/static/wechat.png" mode=""></image>
+				<image class="other-icon" src="/static/qq.png" mode=""></image>
+				<image class="other-icon" src="/static/apple.png" mode=""></image>
+			</view>
+		</view> -->
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				cur: 0,
+				username:"",
+				password:"",
+				msg:""
+			}
+		},
+		methods:{
+			//super用户登录
+			LoginSuper:function(){
+				// console.log("super",this.username,this.password)
+				this.$myHttp({
+				    url: '/super/login',
+					method:"post",
+					data:{
+						"username":this.username,
+						"password":this.password
+					}
+				}).then((res) => {
+					var result = res.data
+					if(result.code==1003) return uni.showToast({
+							title:result.msg,
+							duration: 1500,
+							icon:'error'
+						});
+					if(result.code==1004) return uni.showToast({
+							title:"密码错误",
+							duration: 1500,
+							icon:'error'
+						});
+					uni.setStorageSync('token',result.data.token)
+					uni.setStorageSync('uid',result.data.userID)
+					uni.setStorageSync('user_name',result.data.userName)
+					// 登录成功跳转到首页
+					// uni.switchTab({
+					// 		url: '/pages/index/index'
+					// 	})
+					uni.navigateTo({
+						url:'/pages/super_index/super_index'
+					})
+				})
+			},
+			//辅导员员用户登录
+			LoginInstructor:function(){
+				// console.log("instructor",this.username,this.password)
+					    this.$myHttp({
+					        url: '/login',
+							method:"post",
+							data:{
+								"username":this.username,
+								"password":this.password
+							}
+					    }).then((res) => {
+							var result = res.data
+							if(result.code==1003) return uni.showToast({
+									title:result.msg,
+									duration: 1500,
+									icon:'error'
+								});
+							if(result.code==1004) return uni.showToast({
+									title:"密码错误",
+									duration: 1500,
+									icon:'error'
+								});
+							uni.setStorageSync('token',result.data.token)
+							uni.setStorageSync('uid',result.data.userID)
+							uni.setStorageSync('user_name',result.data.userName)
+							// 登录成功跳转到首页
+							uni.navigateTo({
+								url:'/pages/instructor_index/instructor_index'
+							})
+					    })
+			},
+			NoNUll:function(){
+				if (this.username==""){
+					return uni.showToast({
+							title:"用户名不能为空",
+							duration: 1500,
+							icon:'none'
+						});
+				}
+				if (this.password==""){
+					return uni.showToast({
+							title:"密码不能为空",
+							duration: 1500,
+							icon:'none'
+						});
+				}
+			},
+			Login:function(){
+
+				//校验非空
+				if (!this.cur){
+					if (this.password ==''||this.username==''){
+						uni.showToast({
+								title:"请填写完整的用户名或密码",
+								duration: 2000,
+								icon:'none'
+							});
+						return
+					}
+					this.NoNUll()
+					// console.log("操作员")
+					this.LoginSuper()
+				}else{
+					if (this.password ==''||this.username==''){
+						uni.showToast({
+								title:"请填写完整的用户名或密码",
+								duration: 2000,
+								icon:'none'
+							});
+						return
+					}
+					this.NoNUll()
+					// console.log("辅导员")
+					this.LoginInstructor()
+				}
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	.container {
+		position: relative;
+	}
+	
+	.bg {
+		position: relative;
+		width: 750rpx;
+		height: 400rpx;
+	}
+	
+	.tab {
+		position: absolute;
+		top: 250rpx;
+		left: 20rpx;
+		right: 20rpx;
+		height: 150rpx;
+		padding: 0 50rpx;
+		background-color: #fff;
+		border-top-left-radius: 20rpx;
+		border-top-right-radius: 20rpx;
+		
+		&-bg {
+			position: absolute;
+			top: -200rpx;
+			right: -50rpx;
+			width: 440rpx;
+			height: 285rpx;
+		}
+	}
+	
+	.line {
+		width: 25rpx;
+		height: 7rpx;
+	}
+	
+	.login, .register {
+		padding: 0 60rpx;
+	}
+	
+	.input {
+		width: 630rpx;
+		height: 90rpx;
+		padding: 0 30rpx;
+		background-color: rgba(80, 100, 235, 0.1);
+		// border-radius: 50%;
+		
+		&-icon {
+			width: 30rpx;
+			height: 38rpx;
+		}
+		
+		&-placeholder {
+			color: #5064eb;
+		}
+	}
+	
+	.button {
+		width: 630rpx;
+		height: 90rpx;
+		margin-left: 60rpx;
+		// border-radius: 40%;
+	}
+	
+	.separator {
+		height: 2rpx;
+		margin: 0 30rpx;
+		background-color: #f5f5f5;
+	}
+	
+	.other {
+		&-items {
+			padding: 0 200rpx;
+		}
+		
+		&-icon {
+			width: 50rpx;
+			height: 50rpx;
+		}
+	}
+</style>

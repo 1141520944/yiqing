@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "custom-tabs": "/uni_modules/custom-tabs/components/custom-tabs/custom-tabs",
+    "custom-tab-pane": "/uni_modules/custom-tabs/components/custom-tab-pane/custom-tab-pane",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "zkml-button": "/components/zkml-Button/zkml-Button"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="tab-pane data-v-6d9775a6"><block wx:if="{{show}}"><slot></slot></block><block wx:else><view style="width:750rpx;height:0;" class="data-v-6d9775a6"></view></block></view>

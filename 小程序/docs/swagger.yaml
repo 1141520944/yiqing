@@ -1,0 +1,84 @@
+basePath: /api/v1
+definitions:
+  controller._ResponseAny:
+    properties:
+      code:
+        type: integer
+      data:
+        items: {}
+        type: array
+      message:
+        type: string
+    type: object
+host: 127.0.0.1
+info:
+  contact:
+    email: support@swagger.io
+    name: "18835556819"
+    url: http://www.swagger.io/support
+  description: 下面是项目的接口文档
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: 疫情小程序
+  version: "1.0"
+paths:
+  /api/v1/hello:
+    get:
+      consumes:
+      - multipart/form-data
+      description: 用户登录
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        type: string
+      - in: query
+        name: password
+        required: true
+        type: string
+      - in: query
+        name: username
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller._ResponseAny'
+      security:
+      - ApiKeyAuth: []
+      summary: 获取账号进行登录
+  /api/v1/signup:
+    get:
+      consumes:
+      - multipart/form-data
+      description: 用户登录
+      parameters:
+      - description: Bearer 用户令牌
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - in: query
+        name: password
+        required: true
+        type: string
+      - in: query
+        name: username
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller._ResponseAny'
+      security:
+      - ApiKeyAuth: []
+      summary: 获取账号进行登录
+swagger: "2.0"

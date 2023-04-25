@@ -1,0 +1,16 @@
+{
+    "id": "zkml-Button",
+    "name": "按钮 zkml-button",
+    "version": "1.0.0",
+    "description": "按钮组件",
+    "keywords": [
+        "按钮",
+        "button"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}

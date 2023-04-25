@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['btnClick',['$event']]]]]}}" class="btn" style="{{'background:'+(bgColor)+';'+('color:'+(titleColor)+';')+('height:'+(height)+';')+('width:'+(width)+';')}}" bindtap="__e">{{title}}</view></view>

@@ -1,0 +1,451 @@
+@charset "UTF-8";
+.margin-b5 {
+  margin-bottom: 5rpx;
+}
+.margin-b10 {
+  margin-bottom: 10rpx;
+}
+.margin-b15 {
+  margin-bottom: 15rpx;
+}
+.margin-b20 {
+  margin-bottom: 20rpx;
+}
+.margin-b25 {
+  margin-bottom: 25rpx;
+}
+.margin-b30 {
+  margin-bottom: 30rpx;
+}
+.margin-b40 {
+  margin-bottom: 40rpx;
+}
+.margin-b60 {
+  margin-bottom: 60rpx;
+}
+.margin-b80 {
+  margin-bottom: 80rpx;
+}
+.margin-b100 {
+  margin-bottom: 100rpx;
+}
+.margin-r5 {
+  margin-right: 5rpx;
+}
+.margin-r10 {
+  margin-right: 10rpx;
+}
+.margin-r15 {
+  margin-right: 15rpx;
+}
+.margin-r20 {
+  margin-right: 20rpx;
+}
+.margin-r25 {
+  margin-right: 25rpx;
+}
+.margin-r30 {
+  margin-right: 30rpx;
+}
+.margin-r40 {
+  margin-right: 40rpx;
+}
+.margin-r60 {
+  margin-right: 60rpx;
+}
+.font-18 {
+  font-style: normal;
+  font-size: 18rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-20 {
+  font-style: normal;
+  font-size: 20rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-22 {
+  font-style: normal;
+  font-size: 22rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-24 {
+  font-style: normal;
+  font-size: 24rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-26 {
+  font-style: normal;
+  font-size: 26rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-28 {
+  font-style: normal;
+  font-size: 28rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-30 {
+  font-style: normal;
+  font-size: 30rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-32 {
+  font-style: normal;
+  font-size: 32rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-34 {
+  font-style: normal;
+  font-size: 34rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-36 {
+  font-style: normal;
+  font-size: 36rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-38 {
+  font-style: normal;
+  font-size: 38rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-40 {
+  font-style: normal;
+  font-size: 40rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-46 {
+  font-style: normal;
+  font-size: 46rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-50 {
+  font-style: normal;
+  font-size: 50rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-60 {
+  font-style: normal;
+  font-size: 60rpx;
+  font-family: Droid Sans Fallback;
+}
+.font-80 {
+  font-style: normal;
+  font-size: 80rpx;
+  font-family: Droid Sans Fallback;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.color-white {
+  color: #FFFFFF;
+}
+.color-red {
+  color: #dc0000;
+}
+.color-black {
+  color: #000;
+}
+.color-black-3 {
+  color: #333;
+}
+.color-black-6 {
+  color: #666;
+}
+.color-black-9 {
+  color: #999;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: bold;
+}
+.spacing-20 {
+  width: 750rpx;
+  height: 20rpx;
+  background-color: #f8f8f8;
+}
+.radius-10 {
+  border-radius: 10rpx;
+}
+.radius-20 {
+  border-radius: 20rpx;
+}
+.radius-30 {
+  border-radius: 30rpx;
+}
+.radius-circle {
+  border-radius: 50%;
+}
+.radius-height {
+  border-radius: 10000px;
+}
+.vs-flex-item {
+  flex: 1;
+}
+.vs-space-between {
+  justify-content: space-between;
+}
+.vs-space-around {
+  justify-content: space-around;
+}
+.vs-space-center {
+  justify-content: center;
+}
+.vs-space-end {
+  justify-content: flex-end;
+}
+.vs-row {
+  flex-direction: row;
+}
+.vs-column {
+  flex-direction: column;
+}
+.vs-align-end {
+  align-items: flex-end;
+}
+.vs-align-center {
+  align-items: center;
+}
+.vs-align-start {
+  align-items: flex-start;
+}
+.vs-item-hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.vs-btn-hover {
+  opacity: 0.8;
+}
+.color-base {
+  color: #5064eb;
+}
+.bg-color-base {
+  background-color: #5064eb;
+}
+/* 根元素样式 设置页面背景、字体大小、字体颜色，字符间距、长单词换行 */
+page {
+  background-color: #f3f3f3;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  color: #333;
+  letter-spacing: 0;
+  word-wrap: break-word;
+}
+/* 设置常用元素尺寸规则 */
+view, textarea, input, label, form, button, image {
+  box-sizing: border-box;
+}
+/* 按钮样式处理 */
+button {
+  font-size: 28rpx;
+}
+/* 取消按钮默认的边框线效果 */
+button:after {
+  border: none;
+}
+/* 设置图片默认样式，取消默认尺寸 */
+image {
+  display: block;
+  height: auto;
+  width: auto;
+}
+/* 输入框默认字体大小 */
+textarea, input {
+  font-size: 28rpx;
+}
+/* 列式弹性盒子 */
+.flex_col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+/* 行式弹性盒子 */
+.flex_row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+/* 弹性盒子弹性容器 */
+.flex_col .flex_grow {
+  width: 0;
+  flex-grow: 1;
+}
+.flex_row .flex_grow {
+  flex-grow: 1;
+}
+/* 弹性盒子允许换行 */
+.flex_col.flex_wrap {
+  flex-wrap: wrap;
+}
+/* 弹性盒子居中对齐 */
+.flex_col.flex_center, .flex_row.flex_center {
+  justify-content: center;
+}
+/* 列式弹性盒子两端对齐 */
+.flex_col.flex_space {
+  justify-content: space-between;
+}
+/* 弹性盒子快速分栏 ,这里非常郁闷 uniapp 居然不支持 * 选择器 */
+.flex_col.flex_col_2 > view {
+  width: 50%;
+}
+.flex_col.flex_col_3 > view {
+  width: 33.33333%;
+}
+.flex_col.flex_col_4 > view {
+  width: 25%;
+}
+.flex_col.flex_col_5 > view {
+  width: 20%;
+}
+.flex_col.flex_col_6 > view {
+  width: 16.66666%;
+}
+/* 字体颜色 */
+.color_333 {
+  color: #333;
+}
+.color_666 {
+  color: #666;
+}
+.color_999 {
+  color: #999;
+}
+.color_ccc {
+  color: #ccc;
+}
+.color_fff {
+  color: #fff;
+}
+.color_6dc {
+  color: #6dca6d;
+}
+.color_d51 {
+  color: #d51917;
+}
+.color_09f {
+  color: #0099ff;
+}
+/* 背景色*/
+.bg_fff {
+  background-color: #ffffff;
+}
+/* 字体大小 */
+.size_10 {
+  font-size: 20rpx;
+}
+.size_12 {
+  font-size: 24rpx;
+}
+.size_14 {
+  font-size: 28rpx;
+}
+.size_16 {
+  font-size: 32rpx;
+}
+.size_18 {
+  font-size: 36rpx;
+}
+.size_20 {
+  font-size: 40rpx;
+}
+/* 字体加粗 */
+.font_b {
+  font-weight: bold;
+}
+/* 对齐方式 */
+.align_c {
+  text-align: center;
+}
+.align_l {
+  text-align: left;
+}
+.align_r {
+  text-align: right;
+}
+/* 遮罩 */
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+/* 弹窗 */
+.shade_box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 101;
+  min-width: 200rpx;
+  min-height: 200rpx;
+}
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+page {
+  background-color: #fff;
+}
+/* 标题栏 */
+.title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding-top: 25px;
+  z-index: 10;
+  background-color: rgba(66, 185, 131, 0);
+  color: rgba(255, 255, 255, 0.8);
+}
+.title > view {
+  height: 44px;
+}
+.title .box1 {
+  width: 60rpx;
+  margin: 0 40rpx;
+  font-size: 36rpx;
+}
+.title .tab > view {
+  margin: 0 30rpx;
+  line-height: 64rpx;
+  font-size: 36rpx;
+  position: relative;
+  letter-spacing: 0;
+  transition: -webkit-transform 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s, -webkit-transform 0.3s ease-in-out 0s;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.title .tab > view.active {
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+}
+.title.style2 {
+  color: #FFF;
+  background-color: #5064eb;
+}
+.title.style2 .tab > view.active {
+  color: #FFF;
+}
+

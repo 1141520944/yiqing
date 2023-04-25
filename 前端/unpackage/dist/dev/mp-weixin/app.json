@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/home/home",
+    "pages/super_index/super_index",
+    "pages/instructor_index/instructor_index",
+    "pages/peopleInfo/peopleInfo",
+    "pages/test/test"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "疫情",
+    "navigationBarBackgroundColor": "#5064eb",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./static/tab/首页.png",
+        "selectedIconPath": "./static/tab/首页s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "./static/tab/我的.png",
+        "selectedIconPath": "./static/tab/我的s.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {}
+}
